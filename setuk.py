@@ -1,20 +1,24 @@
+# define func
+
 def calc():
   lines = []
   print("To end typing, type 'end'.")
   while True:
     line = input()
-    if line == 'end':
+    if line == 'end': # break sequence: str(end)
       break
     lines.append(line)
-
+  # join lineend(line)
   text = '\n'.join(lines)  # insert \n between index of lines
+  # integer  
   numFullStr = len(text)  # the number of text
-  space = text.count(' ')
-  enter = text.count('\n')
-  period = text.count('.')
+  space = text.count(' ') # the number of space
+  enter = text.count('\n') # the number of EOL (CRLF, \n)
+  period = text.count('.') # the number of period
+  print((numFullStr - space - enter - period) * 3 + space + period + enter * 2, "byte") #normal Charecter is 3 byte, space, period, and EOL(CRLF, \n) is 2 byte
 
-  print((numFullStr - space - enter - period) * 3 + space + period + enter * 2,
-        "byte")
+
+# operate func
 
 calc()
 
@@ -27,4 +31,4 @@ while True:
     calc()
   else:
     continue 
-    
+
