@@ -8,7 +8,7 @@ def calc():
     if line == 'end': # break sequence: str(end)
       break
     lines.append(line)
-  # join lineend(line)
+  # join line (CRLF)
   text = '\n'.join(lines)  # insert \n between index of lines
   # integer  
   numFullStr = len(text)  # the number of text
