@@ -23,7 +23,7 @@ def calc():
 calc()
 
 while True:
-  print('press ', '', '1', '', ' to exit or ', '', '2', '', ' using calculate again')
+  print('press ', '\033[32m', '1', '\033[0m', ' to exit or ', '\033[32m', '2', '\033[0m', ' using calculate again')
   exiter = input()
   if exiter == '1':
     break
